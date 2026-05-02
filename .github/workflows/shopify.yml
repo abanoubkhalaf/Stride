@@ -20,6 +20,4 @@ jobs:
         run: |
           shopify theme push \
             --store=${{ secrets.SHOPIFY_STORE }} \
-            --password=${{ secrets.SHOPIFY_PASSWORD }} \
-            --theme-id=${{ secrets.SHOPIFY_THEME_ID }} \
-            --allow-live
+            --password=${{ secrets.SHOPIFY_PASSWORD }}
