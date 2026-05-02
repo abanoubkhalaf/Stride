@@ -1,9 +1,9 @@
-name: Deploy to Shopify
+name: Deploy Shopify Theme
 
 on:
   push:
     branches:
-      - main   # لما تعمل push على main
+      - main
 
 jobs:
   deploy:
@@ -11,13 +11,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli @shopify/theme
 
-      - name: Deploy to Shopify
+      - name: Deploy theme to Shopify
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_PASSWORD }}
         run: |
           shopify theme push \
-            --store=${{ secrets.SHOPIFY_STORE }} \
-            --password=${{ secrets.SHOPIFY_PASSWORD }}
+            --store=${{ secrets.SHOPIFY_STORE }}
