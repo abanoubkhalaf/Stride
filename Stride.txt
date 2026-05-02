@@ -1,0 +1,4 @@
+9,050 3 kraten
+8,080 3 kraten
+
+total : 17,130
