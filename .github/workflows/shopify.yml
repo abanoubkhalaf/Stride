@@ -27,3 +27,5 @@ jobs:
         run: |
           shopify theme push \
             --store=${{ secrets.SHOPIFY_STORE }}
+
+            
