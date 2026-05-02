@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "_heading",
+          "settings": {
+            "title": "Privacy Policy"
+          }
+        },
+        "content": {
+          "type": "page-content",
+          "settings": {
+            "content": "<p>Your privacy is important to us. It is Stride's policy to respect your privacy regarding any information we may collect from you across our website.</p><h3>1. Information we collect</h3><p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.</p><h3>2. Use of Information</h3><p>We use the information we collect in various ways, including to provide, operate, and maintain our website, and to process your orders.</p><h3>3. Cash on Delivery (COD)</h3><p>For COD orders, we collect your phone number and delivery address to facilitate the delivery and payment process.</p>"
+          }
+        }
+      },
+      "block_order": ["title", "content"]
+    }
+  },
+  "order": ["main"]
+}

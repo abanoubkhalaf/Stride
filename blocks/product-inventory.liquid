@@ -95,10 +95,36 @@
 
   .product-inventory__icon-in_stock {
     color: var(--color-instock);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .product-inventory__icon-out_of_stock {
-    color: var(--color-outofstock);
+  .product-inventory__icon-in_stock::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-instock);
+    border-radius: 50%;
+    z-index: -1;
+    animation: inventory-pulse 2s infinite;
+  }
+
+  @keyframes inventory-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    70% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
   }
 
   .product-inventory__icon circle:first-of-type {

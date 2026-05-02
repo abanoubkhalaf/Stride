@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "title": {
+          "type": "_heading",
+          "settings": {
+            "title": "Terms & Conditions"
+          }
+        },
+        "content": {
+          "type": "page-content",
+          "settings": {
+            "content": "<p>Welcome to Stride. By accessing this website, you agree to these terms and conditions.</p><h3>1. Orders and Payment</h3><p>We operate on a Cash on Delivery (COD) basis. Payment is due at the time of delivery.</p><h3>2. Delivery</h3><p>We aim to deliver within our stated timeframes, but do not guarantee delivery dates. Please ensure someone is available at the provided address to receive the order and pay the amount due.</p><h3>3. Returns</h3><p>Our return policy is designed to be fair. Please contact us within 7 days of receipt for any issues with your order.</p>"
+          }
+        }
+      },
+      "block_order": ["title", "content"]
+    }
+  },
+  "order": ["main"]
+}

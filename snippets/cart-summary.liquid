@@ -251,8 +251,16 @@
         {% endform %}
       </span>
     {% endif %}
-    <div class="cart-totals__item cart-totals__tax-note cart-primary-typography">
+  <div class="cart-totals__item cart-totals__tax-note cart-primary-typography">
       {% render 'tax-info', has_discounts_enabled: settings.show_add_discount_code %}
+    </div>
+    <div class="cart-cod-notice cart-primary-typography">
+      <div class="cart-cod-notice__inner">
+        <span class="svg-wrapper">
+          {{- 'icon-info.svg' | inline_asset_content -}}
+        </span>
+        <p>{{ 'content.cod_notice' | t | default: 'Cash on Delivery: Pay when you receive your order!' }}</p>
+      </div>
     </div>
   </div>
 </div>
@@ -604,5 +612,34 @@
     .cart-summary--extend {
       height: 100%;
     }
+  }
+
+  .cart-cod-notice {
+    margin-top: var(--margin-md);
+    background-color: var(--color-input-background);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--style-border-radius-inputs);
+    padding: var(--padding-md);
+  }
+
+  .cart-cod-notice__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    color: var(--color-foreground);
+    line-height: var(--font-paragraph--line-height);
+  }
+
+  .cart-cod-notice__inner .svg-wrapper {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+    flex-shrink: 0;
+    color: var(--color-primary);
+  }
+
+  .cart-cod-notice__inner p {
+    margin: 0;
+    font-size: var(--font-size--sm);
+    font-weight: 500;
   }
 {% endstylesheet %}
